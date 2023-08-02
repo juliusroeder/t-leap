@@ -52,7 +52,7 @@ class SequentialPoseDataset(Dataset):
         :param transform: Optional.
         :param normalize: mean and stdev values for normalization
         """
-        self.videos = np.loadtxt(video_list, delimiter=',', dtype=np.unicode, skiprows=1)  # video_name, start, end
+        self.videos = np.loadtxt(video_list, delimiter=',', dtype='U18', skiprows=1)  # video_name, start, end
         self.video_dir = video_dir
         self.labels_dir = labels_dir
         self.seq_length = seq_length
